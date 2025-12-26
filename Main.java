@@ -1,30 +1,76 @@
 
-public class Main {
+import java.util.*;
 
-    public static void printArray(int[] arr, int n) {
-        for (int val : arr) {
-            System.out.print(val + " ");
-        }
-        System.out.println();
+class Student {
+
+    int id;
+    int roll;
+    String name;
+
+    Student(int i, int r, String n) {
+        this.id = i;
+        this.roll = r;
+        this.name = n;
     }
 
-    public static void removeDuplicate(int[] arr, int n) {
-        int i = 0;
-
-        for (int j = 1; j < n; j++) {
-            if (arr[i] != arr[j]) {
-                i++;
-            }
-        }
-        System.out.println(i + 1);
+    void setName(String n) {
+        this.name = n;
     }
+
+    void setRoll(int r) {
+        this.roll = r;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    int getRoll() {
+        return roll;
+    }
+
+    int getId(int i) {
+        return id;
+    }
+
+    void display() {
+        System.out.printf("Id : %d, Name: %s, Roll: %d\n", id, name, roll);
+    }
+}
+
+class Main {
 
     public static void main(String[] args) {
-        int[] arr = {1, 1, 2, 3, 4, 5};
-        int n = arr.length;
+        List<Student> list = new ArrayList<>();
+        int[] id = {1, 2, 3};
+        int[] roll = {38, 39, 40};
+        String[] name = {"Anas", "Alice", "John"};
 
-        printArray(arr, n);
-        removeDuplicate(arr, n);
-        printArray(arr, n);
+        for (int i = 0; i < id.length; i++) {
+            Student student = new Student(id[i], roll[i], name[i]);
+            list.add(student);
+            // student.display();
+        }
+
+        int idx = 2;
+
+        // for (int i = 0; i < list.size(); i++) {
+        //     if (list.get(i).id == idx) {
+        //         list.get(i).display();
+        //         list.get(i).setName("Anas Alam");
+        //         list.get(i).setRoll(1);
+        //         System.out.println(list.get(i).getName());
+        //         System.out.println(list.get(i).getRoll());
+        //         list.get(i).display();
+        //     }
+        // }
+        for (Student val : list) {
+            if (val.getId(val.id) == idx) {
+                val.display();
+                val.setName("Anas Alam");
+                val.setRoll(38);
+                val.display();
+            }
+        }
     }
 }
