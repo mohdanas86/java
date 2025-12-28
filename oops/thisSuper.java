@@ -1,4 +1,4 @@
-package oops;
+// package oops;
 
 // THIS KEYWORD: Refers to current object
 // WHY USE: To differentiate between instance variables and parameters with same name

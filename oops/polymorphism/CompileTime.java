@@ -6,7 +6,7 @@
 //   3. Readability - users don't need to remember different method names
 // WHEN USE: When you want same functionality for different parameter types/signature
 
-package oops.polymorphism;
+package polymorphism;
 
 // CALCULATOR CLASS: Contains overloaded add methods for different data types
 class Calculator {
