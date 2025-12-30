@@ -1,0 +1,13 @@
+Enhanced Comments:
+Top-Level Explanation
+What byte streams are and their purpose
+Why use byte streams vs character streams
+When to use byte stream operations
+
+Detailed Inline Comments:
+Try-with-resources automatic resource management
+FileInputStream/FileOutputStream creation and parameters
+Byte reading variable and its purpose
+Read-write loop explanation and logic
+Individual byte operations
+Error handling for IOException
