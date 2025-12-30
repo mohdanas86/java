@@ -3,7 +3,7 @@
 // WHY USE: Applications need to clean up temporary files, remove old data, manage storage
 // WHEN USE: When your program needs to remove files that are no longer needed
 
-package Files;
+package FilesHandling;
 
 import java.io.File; // For file path representation and operations
 

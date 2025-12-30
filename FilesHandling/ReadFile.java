@@ -3,7 +3,7 @@
 // WHY USE: Applications need to load saved data (configuration, user data, logs)
 // WHEN USE: When your program needs to process information stored in files
 
-package Files;
+package FilesHandling;
 
 import java.io.File; // For file path representation
 import java.io.IOException; // For handling file I/O exceptions

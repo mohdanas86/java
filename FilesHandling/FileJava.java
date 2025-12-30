@@ -28,7 +28,7 @@
 // • list() → String[]: Returns an array of the files in the directory
 // • mkdir() → Boolean: Creates a directory
 
-package Files;
+package FilesHandling;
 
 import java.io.File; // Import File class for file operations
 

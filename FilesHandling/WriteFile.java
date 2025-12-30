@@ -3,7 +3,7 @@
 // WHY USE: Applications need to save data persistently (logs, configuration, user data)
 // WHEN USE: When your program needs to store information that persists after execution
 
-package Files;
+package FilesHandling;
 
 import java.io.FileWriter; // For writing character data to files
 import java.io.IOException; // For handling file I/O exceptions

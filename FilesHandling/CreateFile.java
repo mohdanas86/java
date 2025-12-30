@@ -3,7 +3,7 @@
 // WHY USE: Applications often need to create files for data storage, logs, configuration
 // WHEN USE: When your program needs to create new files or directories
 
-package Files;
+package FilesHandling;
 
 import java.io.File; // Import File class for file operations
 import java.io.IOException; // For handling file operation exceptions
