@@ -1,75 +1,45 @@
-// LINKEDHASHSET: Hash table + linked list implementation of Set interface
-// WHAT IS THIS: HashSet that maintains insertion order using doubly-linked list
-// WHY USE:
-//   1. Unique elements only - prevents duplicates automatically
-//   2. Maintains insertion order - unlike regular HashSet
-//   3. Fast operations - O(1) average time for add/remove/contains
-//   4. Predictable iteration - elements returned in insertion order
-//   5. Memory efficient - slightly more overhead than HashSet but ordered
-// WHEN USE: When you need unique elements with both fast access AND insertion order
-//
-// TIME COMPLEXITY (Big O):
-// • Add(element): O(1) average - Hash function + linked list insertion
-// • Remove(element): O(1) average - Hash lookup and linked list removal
-// • Contains(element): O(1) average - Hash-based search
-// • Size: O(1) - Just returns a field value
-// • IsEmpty: O(1) - Just checks size field
-// • Clear: O(1) - Resets internal structure
-// • Iteration: O(n) - Must visit all elements in insertion order
-//
-// SPACE COMPLEXITY: O(n) - Stores n unique elements plus linked list overhead
-//
-// COMMON METHODS:
-// • add(element) - Add element if not present, O(1) average
-// • remove(element) - Remove specific element, O(1) average
-// • contains(element) - Check if element exists, O(1) average
-// • size() - Get number of elements, O(1)
-// • isEmpty() - Check if set is empty, O(1)
-// • clear() - Remove all elements, O(1)
-// • iterator() - Get iterator for insertion-order traversal, O(1)
-// • toArray() - Convert to array in insertion order, O(n)
-// • addAll(collection) - Add all elements from collection, O(m)
-// • retainAll(collection) - Keep only elements in collection, O(n)
-// • removeAll(collection) - Remove all elements in collection, O(m)
-
 package Ds.Sets;
 
-import java.util.LinkedHashSet; // Import LinkedHashSet for ordered unique elements
+import java.util.LinkedHashSet;
 
+/**
+ * LinkedHashSet Notes for Beginners:
+ * - What it is: LinkedHashSet is a hash table and linked list implementation of
+ * Set that maintains insertion order.
+ * - When to use: Use LinkedHashSet when you need unique elements with fast
+ * operations and want to preserve the order of insertion.
+ * - Why use: It combines HashSet's O(1) performance with predictable iteration
+ * order, unlike regular HashSet.
+ * - Other things: Slightly more memory overhead than HashSet due to linked
+ * list. Allows one null element. Not thread-safe.
+ */
 public class LinkedHashSetJava {
 
     public static void main(String[] args) {
-        // CREATE LINKEDHASHSET: Generic LinkedHashSet for Integer type
-        // WHAT: Creates empty LinkedHashSet that maintains insertion order
-        // WHY: Type-safe collection with uniqueness and predictable iteration
+        // Create a LinkedHashSet for Integer type (maintains insertion order)
         LinkedHashSet<Integer> set = new LinkedHashSet<>();
 
-        // ADD ELEMENTS: Insert unique elements in order
-        // WHAT: Adds 10, 20, 30 to the set in insertion order
-        // WHY: O(1) average time complexity with hash + linked list
+        // Add unique elements using add() (order preserved)
         set.add(10);
         set.add(20);
         set.add(30);
 
-        // DISPLAY SET: Elements appear in insertion order
+        // Print the set in insertion order
         System.out.println(set);
 
-        // CHECK CONTAINS AND SIZE: Basic operations
-        // WHAT: Checks if 20 exists and gets current size
-        // WHY: O(1) average time complexity for both
+        // Check if 20 is in the set using contains()
         System.out.println(set.contains(20));
+        // Get the size of the set using size()
         System.out.println(set.size());
 
-        // REMOVE ELEMENT: Remove specific element
-        // WHAT: Removes element 20 from the set
-        // WHY: O(1) average time complexity
+        // Remove 20 from the set using remove()
         set.remove(20);
+        // Print the set after removal
         System.out.println(set);
 
-        // CLEAR SET: Remove all elements
-        // WHAT: Empties the entire set
-        // WHY: O(1) time complexity
+        // Clear all elements using clear()
         set.clear();
+        // Print the empty set
         System.out.println(set);
     }
 }
