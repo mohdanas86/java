@@ -1,4 +1,4 @@
-package Threading;
+package Advance.Threading;
 
 /**
  * Threads Notes for Beginners:
